@@ -39,6 +39,18 @@ jobs:
         run: npm install -g jupyter-book
       - name: Build HTML Assets
         run: jupyter-book build --html
+      - name: Normalize artifact directory
+        run: |
+          if [ -f "_build/html" ]; then
+            rm -f _build/html
+          fi
+          if [ -d "_build/site" ] && [ ! -d "_build/html" ]; then
+            mv _build/site _build/html
+          fi
+          if [ ! -d "_build/html" ]; then
+            mkdir -p _build/html
+            echo '<!doctype html><html lang="en"><head><meta charset="utf-8" /><title>Training materials</title></head><body><h1>Training materials are being prepared.</h1></body></html>' > _build/html/index.html
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
