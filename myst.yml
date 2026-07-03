@@ -1,0 +1,43 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: d76fe5cf-9ac1-4080-b538-12ac1452d057
+  title: 2026 AVecGen Training
+  description: A training course for bioinformatics organised by AVecGen within the CRID in Cameroon to equip young African scientists with the necessary skills to independently analyse and interpret biological data.
+  keywords: [AVecGen, Bioinformatics, Genomics, CRID, Cameroon]
+  authors:
+    - name: Dr. Gadji M.
+      email: gadji.mahamat@crid-cam.net
+      affiliation: Centre for Research in Infectious Diseases (CRID), Cameroon
+      phone: +237 696 670 922
+
+    - name: Tepa Arnaud
+      email: tepa.arnaud@crid-cam.net
+      affiliation: Centre for Research in Infectious Diseases (CRID), Cameroon
+      phone: +237 676 497 771
+
+    - name: Tazokong Hervé Raoul
+      email: tazokong.herve@crid-cam.net
+      affiliation: Centre for Research in Infectious Diseases (CRID), Cameroon
+      phone: +237 674 558 877
+    
+    - name: Cedrique Noutchih
+      email: cedrique.noutchih@crid-cam.net
+      affiliation: Centre for Research in Infectious Diseases (CRID), Cameroon
+      phone: +237 673 167 981
+
+  github: Gadji-M/AVecGen-Training
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    - file: intro.md
+  
+  exports:
+    - format: pdf
+      template: lapreprint-typst
+      articles: intro.md
+
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png

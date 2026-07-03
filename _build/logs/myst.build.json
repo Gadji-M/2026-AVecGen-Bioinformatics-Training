@@ -1,0 +1,43 @@
+{
+  "input": {
+    "files": [],
+    "opts": {
+      "execute": false,
+      "executeParallel": 9,
+      "pdf": true,
+      "tex": false,
+      "typst": false,
+      "docx": false,
+      "md": false,
+      "xml": false,
+      "meca": false,
+      "cff": false,
+      "site": false,
+      "html": false,
+      "all": false,
+      "doiBib": false,
+      "watch": false,
+      "force": false,
+      "checkLinks": false,
+      "strict": false,
+      "ci": false,
+      "maxSizeWebp": 1572864,
+      "keepHost": false
+    }
+  },
+  "exports": [
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "articles": [
+        {
+          "file": "/Users/mac-laptop01/G@djiM/2026-AVecGen-Workshop/avecgen-training-courses/intro.md",
+          "level": 0
+        }
+      ],
+      "output": "/Users/mac-laptop01/G@djiM/2026-AVecGen-Workshop/avecgen-training-courses/_build/exports/myst_typst/intro.pdf",
+      "$file": "/Users/mac-laptop01/G@djiM/2026-AVecGen-Workshop/avecgen-training-courses/myst.yml",
+      "$project": "/Users/mac-laptop01/G@djiM/2026-AVecGen-Workshop/avecgen-training-courses"
+    }
+  ]
+}
