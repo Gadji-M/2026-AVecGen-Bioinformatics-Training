@@ -41,6 +41,9 @@ jobs:
         run: jupyter-book build --html
       - name: Normalize artifact directory
         run: |
+          if [ -f "_build/html" ]; then
+            rm -f _build/html
+          fi
           if [ -d "_build/site" ] && [ ! -d "_build/html" ]; then
             mv _build/site _build/html
           fi
