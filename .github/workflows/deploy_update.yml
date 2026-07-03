@@ -49,18 +49,7 @@ jobs:
           fi
           if [ ! -d "_build/html" ]; then
             mkdir -p _build/html
-            cat > _build/html/index.html <<'EOF'
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Training materials</title>
-  </head>
-  <body>
-    <h1>Training materials are being prepared.</h1>
-  </body>
-</html>
-            EOF
+            echo '<!doctype html><html lang="en"><head><meta charset="utf-8" /><title>Training materials</title></head><body><h1>Training materials are being prepared.</h1></body></html>' > _build/html/index.html
           fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
