@@ -44,7 +44,21 @@ jobs:
           if [ -d "_build/site" ] && [ ! -d "_build/html" ]; then
             mv _build/site _build/html
           fi
-          mkdir -p _build/html
+          if [ ! -d "_build/html" ]; then
+            mkdir -p _build/html
+            cat > _build/html/index.html <<'EOF'
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <meta charset="utf-8" />
+                <title>Training materials</title>
+              </head>
+              <body>
+                <h1>Training materials are being prepared.</h1>
+              </body>
+            </html>
+            EOF
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
